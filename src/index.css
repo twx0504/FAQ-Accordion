@@ -1,0 +1,98 @@
+/* MOBILE */
+:root {
+  /* COLORS */
+  --light-purple: #f8eeff;
+  --dark-purple: #96789a;
+  --black-purple: #301534;
+  --vibrant-purple: #ad28eb;
+  --white: #fff;
+
+  /* FONT-WEIGHT - I think this is a bit redundant. */
+  --fw-thin: 100;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  /* FONTS */
+  /* FONT-SIZE */
+  --fs-display: 32px;
+  --fs-title: 16px;
+  --fs-body: 14px;
+
+  /* BANNER */
+  --banner-height: 232px;
+  --banner: url("./assets/images/background-pattern-mobile.svg");
+
+  /* CARD */
+  --card-width: 327px;
+  --card-height: 527px;
+
+  /* TOP BOTTOM LEFT RIGHT PADDING */
+  --padding: 24px;
+
+  /* QUESTIONS */
+  --logo-top: 0;
+  --logo-right: -55px;
+  --question-width: 225px;
+  --question-margin-top: 20px;
+  
+  /* ANSWERS */
+  --answer-padding-bottom: 20px;
+
+}
+
+/* TABLETS & DESKTOP */
+@media screen and (min-width: 768px) {
+  :root {
+    /* FONTS */
+    /* FONT-SIZE */
+    --fs-display: 56px;
+    --fs-title: 18px;
+    --fs-body: 16px;
+
+    /* BANNER */
+    --banner-height: 320px;
+    --banner: url("./assets/images/background-pattern-desktop.svg");
+
+    /* CARD */
+    --card-width: 600px;
+    --card-height: 565px;
+
+    /* SPACING */
+    --spacing-small: 24px;
+    --spacing-big: 32px;
+
+    /* TOP BOTTOM LEFT RIGHT PADDING */
+    --padding: 40px;
+
+    /* QUESTIONS LOGO */
+    --logo-top: -6px;
+    --logo-right: 0;
+    --question-width: auto;
+    --question-margin-top: 24px;
+
+    /* ANSWERS */
+  --answer-padding-bottom: 24px;
+  }
+}
+
+@font-face {
+  font-family: "WorkSans";
+  font-weight: 100 900;
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf")
+    format("truetype-variations");
+}
+
+html {
+  font-family: "WorkSans", sans-serif;
+  font-size: var(--fs-body);
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--light-purple);
+}
+
+.root-container {
+  min-height: 100dvh;
+}

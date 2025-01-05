@@ -1,0 +1,122 @@
+/* Remove the default marker */
+details > summary {
+  list-style: none;
+}
+
+.backdrop {
+  /* Ensure the backdrop width falls within 375px - 1440px */
+  width: 100%;
+  min-width: 375px; /* Minimum shrinking width */
+  max-width: 1440px; /* Maximum expandable width */
+  min-height: 100dvh; /* Minimum height is at least the entire viewport height. */
+  /* Center the backdrop */
+  margin: auto;
+  /* Banner */
+  background-image: var(--banner);
+  background-size: auto var(--banner-height);
+  background-repeat: no-repeat;
+  background-position: top center;
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: var(--card-width);
+  border-radius: 10px;
+  background-color: var(--white);
+  padding: var(--padding);
+  box-sizing: border-box;
+}
+
+.card .card-title {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  /* Ensure the bottom of the card title has enough space. */
+  padding-bottom: 24px;
+}
+
+/* Note: h1 is display block */
+.card .card-title img {
+  /* I explicitly specify the width and height here. */
+  width: 40px;
+  height: 40px;
+}
+.card .card-title .card-heading {
+  width: 279px;
+  height: 38px;
+  /* Vertical align the text in h1 */
+  line-height: 38px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-display);
+
+  color: var(--black-purple);
+}
+
+.card .card-content .card-details {
+  border-bottom: 2px solid var(--light-purple);
+}
+
+.card .card-content .card-details:last-child {
+  border-bottom: none;
+}
+
+.card .card-content .card-details .card-question {
+  width: var(--question-width);
+  height: 50px;
+  line-height: 1.2;
+  font-size: var(--fs-title);
+  font-weight: var(--fw-semi-bold);
+  color: var(--black-purple);
+  margin-top: var(--question-margin-top);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease; /* Smooth out the transition of transform */
+}
+
+.card .card-content .card-details .card-question::after {
+  content: url("./assets/images/icon-plus.svg");
+  position: absolute;
+  right: var(--logo-right);
+  top: var(--logo-top);
+  width: 30px;
+  height: 30px;
+}
+
+/* When the details is opened. */
+.card .card-content .card-details[open] .card-question::after {
+  content: url("./assets/images/icon-minus.svg");
+}
+
+.card .card-content .card-details .card-answer {
+  font-size: var(--fs-body);
+  color: var(--dark-purple);
+  /* If set as margin-bottom it will have margin collapse issue. */
+  padding-bottom: var(--answer-padding-bottom);
+  line-height: 1.5;
+}
+
+/* STATES */
+.card .card-content .card-details .card-question:hover,
+.card .card-content .card-details .card-question:active {
+  color: var(--vibrant-purple);
+}
+
+.card .card-content .card-details .card-question:focus-visible {  
+  outline: 2px solid var(--vibrant-purple);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.card .card-content .card-details .card-question:active {
+  transform: scale(0.98);
+}
+
+@media (hover: none) {
+  /* Target non-hoverable devices (touchscreen) */
+  .card .card-content .card-details .card-question:hover {
+    color: var(--black-purple); /* Ensure the hover will not change colors. Set it to original color. */
+  }
+}

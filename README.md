@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ accordion solution
 
-This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz).
 
 ## Table of contents
 
@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FAQ-Accordion](https://github.com/twx0504/FAQ-Accordion)
+- Live Site URL: [Live](https://twx0504.github.io/FAQ-Accordion/)
 
 ## My process
 
@@ -50,6 +50,6 @@ Users should be able to:
 2. Getting confused with the React's useState and getting issues like glitching likely due to rerendering. I should aim to further improve my understanding on this topic.
 
 ## Author
+
 - GitHub - [twx0504](https://github.com/twx0504)
 - Frontend Mentor - [@twx0504](https://www.frontendmentor.io/profile/twx0504)
-
